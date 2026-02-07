@@ -168,7 +168,7 @@ export function CartLog({ onClose }: CartLogProps) {
                     <tr key={transaction.id}>
                       <td>{formatDate(transaction.transaction_date)}</td>
                       <td>
-                        <span className={`badge ${transaction.transaction_type === 'Purchase' ? 'badge-success' : 'badge-warning'}`}>
+                        <span className="badge" data-type={transaction.transaction_type}>
                           {transaction.transaction_type}
                         </span>
                       </td>

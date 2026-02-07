@@ -242,7 +242,7 @@ export function CartView({ refreshKey }: { refreshKey: number }) {
                 {cartItems.map((item) => (
                   <tr key={item.id}>
                     <td className="type-cell">
-                      <span className={`badge ${item.transaction_type === 'Purchase' ? 'badge-success' : 'badge-warning'}`}>
+                      <span className="badge" data-type={item.transaction_type}>
                         {item.transaction_type}
                       </span>
                     </td>
